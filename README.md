@@ -20,6 +20,7 @@ Real-Time Chat is powered by Socket.IO. is a web application that allows multipl
     
     ```
     $ cd NodeServer
+    $ npm install
     $ node index.js
     ```
 Vfile1.html File Open with Live Server
