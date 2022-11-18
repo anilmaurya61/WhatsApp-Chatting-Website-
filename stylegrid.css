@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-rows: 60px 40px 40px 530px auto;
+  grid-template-columns: 200px 200px auto;
+}
+#roundrec {
+  border-radius: 15px;
+  background: rgb(79, 47, 74);
+  padding: 10px;
+  width: 380px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+#roundrec1 {
+  border-radius: 15px;
+  background: rgb(79, 47, 74);
+  padding: 10px;
+  width: 890px;
+  height: 50px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+.div1 {
+  background-color: rgb(193, 113, 240);
+  grid-column: span 2;
+  /* background-color: rgb(245, 242, 247); */
+}
+.div2 {
+  background-color: rgb(90, 247, 220);
+}
+.div7 {
+  background-color: aquamarine;
+}
+.div8 {
+  background-color: rgb(224, 134, 190);
+}
+.div3 {
+  background-color: blueviolet;
+  grid-column: span 2;
+}
+.div4 {
+  background-color: rgb(136, 236, 136);
+  grid-row: span 3;
+  overflow-y: auto;
+  background-image: url("5370420.jpg");
+  background-size: 100% 100%;
+}
+
+.div5 {
+  background-color: rgb(80, 45, 192);
+  grid-column: span 2;
+  grid-row: span 2;
+  overflow-y: auto;
+  background-image: url("chat background.jpg");
+  background-size: 100% 100%;
+}
+.send {
+  background-color: rgb(160, 248, 88);
+  height: 100%-40px;
+}
+.btn {
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 6px;
+  height: 40px;
+  width: 65px;
+  background-color: rgb(125, 182, 69);
+  margin-bottom: 8px;
+}
+
+.btn1 {
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-top: 23px;
+}
+.message {
+  background-color: rgb(12, 155, 211);
+  width: 24%;
+  padding: 10px;
+  height: 50px;
+  margin: 8px 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(192, 226, 43);
+}
+
+.left {
+  float: left;
+  clear: both;
+}
+
+.right {
+  float: right;
+  clear: both;
+}
+.image {
+  background-color: rgb(12, 155, 211);
+  width: auto;
+  padding: 20px 20px;
+  height: auto;
+  margin: 8px 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(192, 226, 43);
+}
+.video {
+  background-color: rgb(12, 155, 211);
+  width: auto;
+  padding: 20px 20px;
+  height: auto;
+  margin: 8px 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(192, 226, 43);
+}
+.audio {
+  background-color: rgb(12, 155, 211);
+  width: 24%;
+  padding: 10px;
+  height: 50px;
+  margin: 8px 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(192, 226, 43);
+  cursor: pointer;
+}
+.naming {
+  background-color: rgb(108, 211, 12);
+  width: 90%;
+  padding: 10px;
+  height: 80px;
+  margin: 8px 15px;
+  border-radius: 15px;
+  /* text-align: center; */
+  border: 2px solid rgb(192, 226, 43);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.Files {
+  position: absolute;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.File-content {
+  display: none;
+  position: absolute;
+  margin-top: 360px;
+  margin-left: 10px;
+  max-width: 50px;
+  max-height: 50px;
+  z-index: 1;
+  flex-direction: row;
+}
+.File-content span {
+  margin-top: 20px;
+}
+
+/* Links inside the dropdown */
+.File-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#user {
+  margin-left: 250px;
+  cursor: pointer;
+}
+
+.Icon-content #remove-pic {
+  display: none;
+}
+.Icon-content {
+  display: none;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 316px;
+  max-width: 50px;
+  max-height: 50px;
+  z-index: 1;
+  flex-direction: row;
+}
+.Icon-content span {
+  margin-top: 20px;
+}
+
+.naming a {
+  margin-left: 0px;
+}
+
+.count {
+  margin-left: 50px;
+  margin-top: 08px;
+  display: flex;
+}
+.noof {
+  margin-left: 20px;
+  margin-top: 5px;
+  color: rgb(12, 12, 12);
+}
+.timer {
+  margin-left: 10px;
+  margin-top: 07px;
+  display: flex;
+  align-items: center;
+}
+.timer p {
+  margin-left: 8px;
+  margin-top: 18px;
+}
+
+#hours::after,
+#minutes::after,
+#seconds::after {
+  content: ": ";
+}

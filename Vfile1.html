@@ -1,0 +1,108 @@
+<!DOCTYPE html>    
+<head>
+    <title>whatsapp clone</title>
+    <script src="https://kit.fontawesome.com/1c79c9d694.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <script defer src='http://localhost:8000/socket.io/socket.io.js'></script><!-- join server and client -->
+    <script class="jsbin" defer src='js/client.js'></script>
+   <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type='text/css' href="stylegrid.css">
+  </head>
+  <body>
+    <main>
+      <div class="div1">
+        
+        <!-- <div id="video-information" ></div>
+        <div id="chunk-information" style="width: 50%"></div> -->
+	      
+        <img src= "gna.jpg" align="left" alt= "icon" style="vertical-align: middle;margin-left: 10px; border-radius: 50%;">
+        
+        <span class="fa-stack fa-2x" id="user">
+          <i class="fas fa-circle fa-stack-2x" id="user-circle"></i>
+          <i class="fas fa-user fa-stack-1x fa-inverse" id="user-icon" ></i>
+        </span>
+        <div class="Icon-content" id="IconId-content">
+          <span class="fa-stack w3-animate-top fa-2x">
+            <label for="user-pics" style="cursor: pointer;"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-images fa-stack-1x fa-inverse"></i></label>
+            <input id="user-pics" style="visibility:hidden;" type="file"  > </input>
+          </span>
+          <span class="fa-stack w3-animate-top fa-2x" id="remove-pic" style="cursor: pointer;">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-trash-alt fa-stack-1x fa-inverse"></i>
+          </span>
+        </div>
+
+        <!-- <i class="fas user fa-user"></i> -->
+      </div>
+      <div class="div2">
+        <img src= "gna.jpg" align="left" alt= "icon" style="vertical-align: middle; margin-left: 10px; border-radius: 50%;">
+        
+        <h3 text align="center" style="vertical-align: middle; color:goldenrod;  margin-top: 23px;margin-left: 60px;"><b>WHATSUP</b></h3>
+        
+      </div>
+      <div class="div7">
+        <div class="count"id="me">
+          <i class="fas fa-2x fa-user-friends"></i>
+        </div>
+      </div>
+      <div class="div8">
+        <div class="timer"id="clock">
+          <i class="far fa-2x fa-clock"></i>      
+           <p><span id="hours" text align="center" style="vertical-align: middle; margin-top: 10px;">00</span><span id="minutes"text align="center" style="vertical-align: middle;">00</span><span id="seconds"text align="center" style="vertical-align: middle; ">00</span><span id="milliseconds"text align="center" style="vertical-align: middle; ">00</span></p>
+        </div>
+
+      </div>
+      <div class="div4" background="chat background.jpg" >
+        <!--<div class="message right">Nikhil: hi</div>
+        <div class="message left">Abhi: hello</div>-->
+        <div class="File-content" id="Folder-content">
+          <span class="fa-stack w3-animate-bottom fa-2x">
+            <label for="Image-file" class="btn1" style="cursor: pointer;"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-images fa-stack-1x fa-inverse"></i></label>
+            <input id="Image-file" style="visibility:hidden;" type="file"  > </input>
+          </span>
+          <span class="fa-stack w3-animate-bottom fa-2x">
+            <label for="Video-file" class="btn1" style="cursor: pointer;"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-video fa-stack-1x fa-inverse"></i></label>
+            <input id="Video-file" style="visibility:hidden;" type="file"  > </input>
+          </span>
+          <span class="fa-stack w3-animate-bottom fa-2x">
+            <label for="Audio-file" class="btn1" style="cursor: pointer;"><i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-music fa-stack-1x fa-inverse"></i></label>
+            <input id="Audio-file" style="visibility:hidden;" type="file"  > </input> 
+          </span>
+        </div>
+      </div>
+      
+      
+      <div class="div3">
+        <input type="text" id="roundrec" onkeyup="myFunction()" placeholder="Search and start new chat"style="font-size:18px; color:white;">
+      </input>
+      
+      </div>
+      <div class="div5" id="int">
+      </div>
+      
+
+
+      <div class="send">
+        <form action="#" id="send-msg">
+        <div class="Files" >
+          <i class="far fa-4x fa-folder" id="folder"></i>
+        </div>
+        <input type="text" name ="roundrec1" id="roundrec1" placeholder="Type your message here"style="margin-left:95px; margin-top:11px; font-size:18px; color:white;width: calc(100% - 185px);">
+        <button class="btn" type="submit"style="margin-left: 10px; margin-top: 05px;"><i class="fas plane fa-2x fa-paper-plane "></i></button>
+        <!-- <button class="btn" type="submited" style="margin-left: 10px; margin-top: 05px;">Send</button> -->
+        </form>
+      </div>
+    </main>
+    
+  </body>
+</html>

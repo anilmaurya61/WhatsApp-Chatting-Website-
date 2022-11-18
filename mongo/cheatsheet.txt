@@ -1,0 +1,167 @@
+Commands for databases-:
+
+View all database
+show dbs
+
+show current working database
+db
+
+to create new or switch database
+use [database name]
+
+to delete current database
+db.dropDatabase()
+
+
+
+Commands for collections(table)-:
+
+
+to show collections
+show collections
+
+to create new collection(key) in database
+db.createCollection(<collectionname>)
+
+to delete collection
+db.<collectionname>.drop()
+
+
+
+Commands for rows
+
+Show all rows in a collection
+db.<collectionname>.find()
+
+find the first row matching the object
+db.<collectionname>.findOne({name:"Nik"})
+
+Show all rows in a collection(prettified(better manner))
+db.<collectionname>.find().pretty()
+
+Insert one rows
+db.<collectionname>.insert({
+  'name':"Nik",
+  'lang':"javascript",
+  'member_since': 5
+})
+
+Insert many rows
+db.<collectionname>.insertMany([
+  {
+  'name':"Nik",
+  'lang':"javascript",
+  'member_since': 5
+  },
+  {
+    'name':"Abhi",
+  'lang':"CSS",
+  'member_since': 4
+  },
+  {
+  'name':"Saksham",
+  'lang':"HTML",
+  'member_since': 3
+  }
+  ])
+
+To add new row with more columns
+  db.<collectionname>.insert({
+  'name':"gourav",
+  'lang':"javascript",
+  'member_since': 7,
+  "date": 20
+})
+
+Search in a mongodb database
+db.<collectionname>.find({lang:"CSS",name:"Abhi"})
+
+to limit the number of rows that is displayed
+db.<collectionname>.find().pretty().limit(2)
+
+count the number of rows in the output
+db.<collectionname>.find().count()
+//shows total number of rows(8)
+
+db.<collectionname>.find().limit(2).count()
+//still shows total number of rows(8) 
+//because it counts the output, not the printed lines
+
+db.<collectionname>.find({lang:"CSS",name:"Abhi"}).count()
+//shows no. of lines which have lang as css and name as abhi
+
+Sort on the basis of member_since-:
+in ascending order
+db.<collectionname>.find().sort({member_since:1}).pretty()
+//collection which don't have member_since column 
+//displays at first
+
+in descending order
+db.<collectionname>.find().sort({member_since:-1}).pretty()
+//collection which don't have member_since column 
+//displays at last
+
+
+Update a row
+
+db.title.update({name:"Abhi"},
+{'name':"Abhi",
+  'lang':"CSS",
+  'member_since': 40
+})
+//It will find abhi and update that row
+//if not found, do nothing
+
+
+
+db.title.update({name:"Abhi"},
+{'name':"Abhi",
+  'lang':"CSS",
+  'member_since': 40
+}, {upserted: true})
+////It will find abhi and update that row
+//if not found, create new object
+
+
+Mongodb increment operator
+
+db.title.update({"name": "Nik"},
+{$inc:{
+  member: 10
+}})
+//it will increse the value of member_since by 2
+//whose name is nik.
+
+Mongodb rename operator
+db.title.update({"name": "Nik"},
+{$rename:{
+  member: 'member_since'
+}})
+
+rename all 
+db.title.update({},
+{$rename:{
+  member: 'member_since'
+}})
+
+
+
+
+Delete row
+db.title.remove({name:"nik})
+
+
+
+
+
+Less than
+db.title.find({member_since:{$lt:90}})
+
+greater than
+db.title.find({member_since:{$gt:90}})
+
+less than equal to
+db.title.find({member_since:{$lte:90}})
+
+greater than equal to
+db.title.find({member_since:{$gte:90}})
